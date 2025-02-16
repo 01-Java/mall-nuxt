@@ -107,4 +107,13 @@ export default defineNuxtConfig({
 	},
 
 	pwa,
+
+	imports: {
+		imports: [
+			{
+				name: "useAxios",
+				from: "@vueuse/integrations/useAxios",
+			},
+		],
+	},
 });
