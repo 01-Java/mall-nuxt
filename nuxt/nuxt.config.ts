@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 		"@vite-pwa/nuxt",
 		"@element-plus/nuxt",
 		"@nuxtjs/color-mode",
+		"@nuxt/image",
 	],
 
 	devtools: {
