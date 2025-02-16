@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "@vite-pwa/nuxt",
     "@element-plus/nuxt",
+    "@nuxtjs/color-mode",
   ],
 
   devtools: {
@@ -46,13 +47,9 @@ export default defineNuxtConfig({
 
   css: [
     "@unocss/reset/tailwind.css",
-    "~/styles/main.scss",
+    "~/app/styles/main.scss",
     "//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css",
   ],
-
-  colorMode: {
-    classSuffix: "",
-  },
 
   runtimeConfig: {
     apiSecret: "",
@@ -89,11 +86,14 @@ export default defineNuxtConfig({
     },
   },
 
-  eslint: {
-    config: {
-      standalone: false,
-      nuxt: {
-        sortConfigKeys: true,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "~/app/styles/var.scss" as *;
+          `,
+        },
       },
     },
   },
