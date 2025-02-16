@@ -11,7 +11,7 @@ interface CartItem {
 	attrsText: string;
 }
 
-export const useCartState = defineStore("cart", () => {
+export const useCartStore = defineStore("cart", () => {
 	const cartList = ref<CartItem[]>([]);
 
 	const allCount = computed(() => {

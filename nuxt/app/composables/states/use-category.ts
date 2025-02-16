@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { getCategoryAPI } from "@/apis/layout";
 import type { ApifoxModel_HomeCategoryHead } from "@/models/homeCategoryHead";
 
-export const useCategoryState = defineStore("category", () => {
+export const useCategoryStore = defineStore("category", () => {
 	const categoryList = ref<ApifoxModel_HomeCategoryHead[]>([]);
 
 	async function getCategory() {

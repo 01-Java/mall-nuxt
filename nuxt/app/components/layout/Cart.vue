@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useCartStore } from "@/stores";
-
 const cartStore = useCartStore();
 </script>
 
@@ -11,7 +9,7 @@ const cartStore = useCartStore();
 		</a>
 		<div class="layer">
 			<div class="list">
-				<div class="item" v-for="i in cartStore.cartList" :key="i">
+				<div class="item" v-for="(i, index) in cartStore.cartList" :key="index">
 					<NuxtLink to="">
 						<img :src="typeof i.picture === 'string' ? i.picture : i.picture[0]" alt="" />
 						<div class="center">

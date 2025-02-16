@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useScroll } from "@vueuse/core";
-import { useCategoryStore } from "@/stores";
 
 // 置顶导航
 const { y } = useScroll(window);

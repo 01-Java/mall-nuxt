@@ -108,6 +108,11 @@ export default defineNuxtConfig({
 	pwa,
 
 	imports: {
+		dirs: [
+			/** @see https://nuxt.com/docs/guide/directory-structure/composables#how-files-are-scanned */
+			"composables/**",
+		],
+
 		imports: [
 			{
 				name: "useAxios",

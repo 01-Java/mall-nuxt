@@ -14,7 +14,7 @@ interface Profile {
 	profession: string;
 }
 
-export const useUserState = defineStore("user", () => {
+export const useUserStore = defineStore("user", () => {
 	const profile = ref<Profile>({
 		id: "",
 		account: "",
