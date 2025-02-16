@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { pwa } from "./app/config/pwa";
 import { appDescription } from "./app/constants/index";
 
@@ -47,8 +48,9 @@ export default defineNuxtConfig({
 
   css: [
     "@unocss/reset/tailwind.css",
-    "~/app/styles/main.scss",
-    "//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css",
+    "./app/styles/main.scss",
+    // 不处理该样式
+    // "at.alicdn.com/t/font_2143783_iq6z4ey5vu.css",
   ],
 
   runtimeConfig: {
@@ -56,6 +58,11 @@ export default defineNuxtConfig({
     public: {
       apiBase: "https://pcapi-xiaotuxian-front-devtest.itheima.net",
     },
+  },
+
+  alias: {
+    "@": resolve(__dirname, "./app"),
+    "~": resolve(__dirname, "./app"),
   },
   devServer: {
     port: 8080,
@@ -91,7 +98,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "~/app/styles/var.scss" as *;
+            @use "@/styles/var.scss" as *;
           `,
         },
       },
