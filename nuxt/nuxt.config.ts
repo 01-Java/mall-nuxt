@@ -24,6 +24,10 @@ export default defineNuxtConfig({
 				{ rel: "icon", href: "/favicon.ico", sizes: "any" },
 				{ rel: "icon", type: "image/svg+xml", href: "/vite.svg" },
 				{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+				{
+					rel: "stylesheet",
+					href: "//at.alicdn.com/t/font_2143783_iq6z4ey5vu.css",
+				},
 			],
 			meta: [
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -46,12 +50,7 @@ export default defineNuxtConfig({
 		},
 	},
 
-	css: [
-		"@unocss/reset/tailwind.css",
-		"./app/styles/main.scss",
-		// 不处理该样式
-		// "at.alicdn.com/t/font_2143783_iq6z4ey5vu.css",
-	],
+	css: ["@unocss/reset/tailwind.css", "./app/styles/main.scss"],
 
 	runtimeConfig: {
 		apiSecret: "",
