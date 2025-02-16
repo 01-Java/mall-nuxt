@@ -1,4 +1,4 @@
-import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { pwa } from "./app/config/pwa";
 import { appDescription } from "./app/constants/index";
 
@@ -61,8 +61,9 @@ export default defineNuxtConfig({
   },
 
   alias: {
-    "@": resolve(__dirname, "./app"),
-    "~": resolve(__dirname, "./app"),
+    "@": fileURLToPath(new URL("./app", import.meta.url)),
+    "~": fileURLToPath(new URL("./app", import.meta.url)),
+    styles: fileURLToPath(new URL("./app/styles", import.meta.url)),
   },
   devServer: {
     port: 8080,
@@ -98,7 +99,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "@/styles/var.scss" as *;
+            @use "styles/var.scss" as *;
           `,
         },
       },
