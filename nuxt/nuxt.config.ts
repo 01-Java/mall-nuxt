@@ -112,6 +112,8 @@ export default defineNuxtConfig({
 		dirs: [
 			/** @see https://nuxt.com/docs/guide/directory-structure/composables#how-files-are-scanned */
 			"composables/**",
+			// 暂时不弄自动导入，应为有很多接口函数的命名是重名的，重复导入导致部分接口丢失名称。
+			// "apis/**",
 		],
 
 		imports: [
