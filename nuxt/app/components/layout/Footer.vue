@@ -17,9 +17,10 @@
 					<dl>
 						<dt>下载APP</dt>
 						<dd class="qrcode">
-							<img src="@/assets/images/qrcode.jpg" />
+							<!-- <img src="@/assets/images/qrcode.jpg" /> -->
 							<!-- TODO: 不清楚如何使用 NuxtImg 组件 ， 无法导入期望的图片 -->
-							<!-- <NuxtImg src="@/assets/images/qrcode.jpg"></NuxtImg> -->
+							<!-- https://nuxt.com/docs/api/components/nuxt-img -->
+							<NuxtImg src="/images/qrcode.jpg"></NuxtImg>
 						</dd>
 						<dd class="download">
 							<span>扫描二维码</span>
